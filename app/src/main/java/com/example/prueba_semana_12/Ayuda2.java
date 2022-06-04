@@ -3,13 +3,15 @@ package com.example.prueba_semana_12;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.VideoView;
 
 public class Ayuda2 extends AppCompatActivity {
     Button Regresar;
-
+    VideoView videoView;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,5 +25,13 @@ public class Ayuda2 extends AppCompatActivity {
             }
         });
 
+        videoView = (VideoView)findViewById(R.id.videoView);
+
+        String path = "android.resource://"+ getPackageName() + "/" +
+                R.raw.video;
+        videoView.setVideoURI(Uri.parse(path));
+        videoView.start();
+
     }
 }
+
