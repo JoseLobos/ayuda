@@ -10,6 +10,18 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Prueba_semana_12">
         <activity
+            android:name=".Ayuda4"
+            android:exported="false" />
+        <activity
+            android:name=".Ayuda3"
+            android:exported="false" />
+        <activity
+            android:name=".Ayuda2"
+            android:exported="false" />
+        <activity
+            android:name=".Ayuda1"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
